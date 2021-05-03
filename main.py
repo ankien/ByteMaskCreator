@@ -13,7 +13,7 @@ with open("input.txt", 'r') as file:
 if littleEndian == 'y':
     for line in content:
         string = line.split(' ')
-        index = int(line[0],16)
+        index = int(string[0],16)
         addressInput = string[2].split('_')
         for byte in reversed(addressInput):
             array[index] = byte
@@ -21,7 +21,7 @@ if littleEndian == 'y':
 else:
     for line in content:
         string = line.split(' ')
-        index = int(line[0],16)
+        index = int(string[0],16)
         addressInput = string[2].split('_')
         for byte in addressInput:
             array[index] = byte
